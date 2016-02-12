@@ -1,7 +1,9 @@
 web:
   build: .
+  restart: always
   ports:
     - "80:80"
+    - "81:81"
   links:
     - kibana
     - elastic
