@@ -10,8 +10,9 @@ RUN apt-get update \
 # Add default credentials
 RUN htpasswd -cb /etc/nginx/.htpasswd kibana "elastic"
 
-# Copy Nginx config
+# Copy Nginx config & ssl certificates
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY ["ssl/nginx.crt", "ssl/nginx.key", "/etc/nginx/ssl/"]
 
 # Run nginx
 CMD ["nginx", "-g", "daemon off;"]

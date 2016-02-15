@@ -1,0 +1,1 @@
+Copy nginx.crt and nginx.key to this directory. See https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04 for more information on how to create these keys.
